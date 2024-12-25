@@ -1,0 +1,13 @@
+### GET All Todos
+GET http://localhost:3344/api/v1/todos
+
+### POST Todos
+POST http://localhost:3344/api/v1/todos
+content-type: application/json
+
+{
+    "title": "todo two",
+    "description": "todo two description"
+}
+
+### GET Single Todo
