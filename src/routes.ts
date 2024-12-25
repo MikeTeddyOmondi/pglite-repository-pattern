@@ -40,20 +40,20 @@ router.post("/", async (ctx) => {
     }
 });
 
-// router.get("/:id", async (ctx) => {
-//     try {
-//         logger.info("[!] Single User [GET]");
-//         const userId = ctx.req.param("id");
-//         const user = await User.findById(userId).exec();
-//         logger.info({ user }, "[!] SUCCESS: Single User: [GET]");
-//         ctx.status(200);
-//         return ctx.json({ success: true, data: { user } });
-//     } catch (error: any) {
-//         logger.error("[!] ERROR: Single User: [GET]");
-//         ctx.status(500);
-//         return ctx.json({ success: false, message: `Something went wrong!` });
-//     }
-// });
+router.get("/:id", async (ctx) => {
+    try {
+        logger.info("[*] Single Todo [GET]");
+        const todoId = parseInt(ctx.req.param("id"));
+        const todo = await todoService.getTodoById(todoId);
+        logger.info("[*] SUCCESS: Single Todo: [GET]");
+        ctx.status(200);
+        return ctx.json({ success: true, data: { todo } });
+    } catch (error: any) {
+        logger.error("[!] ERROR: Single Todo: [GET]");
+        ctx.status(500);
+        return ctx.json({ success: false, message: `Something went wrong!` });
+    }
+});
 
 // router.put("/:id", async (ctx) => {
 //     try {

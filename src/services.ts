@@ -9,7 +9,7 @@ export class TodoService {
         this.todos = todoRepository;
     }
 
-    async getUserById(id: number): Promise<Todo | null> {
+    async getTodoById(id: number): Promise<Todo | null> {
         return this.todos.findById(id);
     }
 

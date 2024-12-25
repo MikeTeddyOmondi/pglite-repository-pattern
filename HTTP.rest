@@ -11,3 +11,4 @@ content-type: application/json
 }
 
 ### GET Single Todo
+GET http://localhost:3344/api/v1/todos/1
