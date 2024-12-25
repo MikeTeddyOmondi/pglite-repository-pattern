@@ -23,7 +23,7 @@ export class TodoRepository {
 
     // Update a todo by ID
     async update(id: number, data: Partial<Todo>): Promise<Todo | null> {
-        await db.update(todos).set(data);
+        await db.update(todos).set(data).where(eq(todos.id, id));
         return this.findById(id);
     }
 

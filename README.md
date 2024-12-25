@@ -1,4 +1,4 @@
-# PGLite - Demo of Repository Pattern
+# Demo of Repository Pattern w/ Hono, PGLite & Drizzle ORM
 
 Sample Boilerplate (AI Generated)
 

@@ -12,3 +12,12 @@ content-type: application/json
 
 ### GET Single Todo
 GET http://localhost:3344/api/v1/todos/1
+
+### PUT Single Todo
+PUT http://localhost:3344/api/v1/todos/2
+content-type: application/json
+
+{
+    "title": "todo two updated",
+    "description": "todo two updated description"
+}
